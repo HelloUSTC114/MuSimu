@@ -1,0 +1,13 @@
+<!-- this is a file defining Slab Design (G4LogicalVolume) in split.gdml -->
+<!-- it is _not_ a standalone GDML file -->
+<!-- This file should be referenced in <structure></structure>-->
+<!-- Dependencies : Config_Matter/Material_matterDB/Solid_matter.gdml_entity-->
+
+<!--Structure : Matter<-World<-box-->
+
+
+
+<volume name="Matter">
+    <materialref ref="G4_Pb" />
+    <solidref ref="MatterWorld" />
+</volume>

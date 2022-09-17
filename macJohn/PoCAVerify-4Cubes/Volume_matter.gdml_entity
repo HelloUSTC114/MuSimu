@@ -1,0 +1,84 @@
+<!-- this is a file defining Slab Design (G4LogicalVolume) in split.gdml -->
+<!-- it is _not_ a standalone GDML file -->
+<!-- This file should be referenced in <structure></structure>-->
+<!-- Dependencies : Config_Matter/Material_matterDB/Solid_matter.gdml_entity-->
+
+<!--Structure : Matter<-World<-box-->
+
+<volume name="MatterR">
+  <materialref ref="G4_Pb" />
+  <solidref ref="MatterUR" />
+</volume>
+
+<volume name="MatterL">
+  <materialref ref="G4_Pb" />
+  <solidref ref="MatterUL" />
+</volume>
+
+<volume name="MatterD">
+  <materialref ref="G4_Pb" />
+  <solidref ref="MatterUD" />
+</volume>
+
+
+<volume name="Cube_Fe">
+  <materialref ref="G4_Fe" />
+  <solidref ref="Cube_Fe" />
+</volume>
+
+<volume name="Cube_Cu">
+  <materialref ref="G4_Cu" />
+  <solidref ref="Cube_Cu" />
+</volume>
+
+<volume name="Cube_Pb">
+  <materialref ref="G4_Pb" />
+  <solidref ref="Cube_Pb" />
+</volume>
+
+<volume name="Cube_Al">
+  <materialref ref="G4_Al" />
+  <solidref ref="Cube_Al" />
+</volume>
+
+<!-- <volume name="Matter">
+  <materialref ref="G4_AIR" />
+  <solidref ref="MatterWorld" />
+  <physvol>
+    <volumeref ref="MatterD"/>
+    <position unit="cm" y="-LengthU/2.+HeightU/2." />
+  </physvol>
+  <physvol>
+    <volumeref ref="MatterR" />
+    <position unit="cm" x="LengthU/2.+HeightU/2." />
+    <rotation z="90" unit="deg" />
+  </physvol>
+  <physvol>
+    <volumeref ref="MatterD" />
+    <position unit="cm" x="-LengthU/2.-HeightU/2." />
+    <rotation z="270" unit="deg" />
+  </physvol>
+
+</volume> -->
+
+<volume name="Matter">
+  <materialref ref="G4_AIR" />
+  <solidref ref="MatterWorld" />
+  <physvol>
+    <volumeref ref="Cube_Fe" />
+    <position x="-100" y="100" />
+  </physvol>
+  <physvol>
+    <volumeref ref="Cube_Cu" />
+    <position x="100" y="100" />
+  </physvol>
+  <physvol>
+    <volumeref ref="Cube_Pb" />
+    <position x="100" y="-100" />
+  </physvol>
+  <physvol>
+    <volumeref ref="Cube_Al" />
+    <position x="-100" y="-100" />
+  </physvol>
+
+</volume>
