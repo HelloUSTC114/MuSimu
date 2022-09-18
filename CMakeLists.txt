@@ -23,23 +23,23 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/inc/*.hh)
 
 
 link_libraries(${Geant4_LIBRARIES}
-                ROOT::Core
-                ROOT::RIO
-                ROOT::Geom
-                ROOT::Gpad
+#                ROOT::Core
+#                ROOT::RIO
+#                ROOT::Geom
+#                ROOT::Gpad
                 ROOT::Graf3d
-                ROOT::Graf
-                ROOT::Gui
-                ROOT::Hist
-                ROOT::MathCore
-                ROOT::Matrix
-                ROOT::Minuit
-                ROOT::Minuit2
-                ROOT::Rint
-                ROOT::TMVA
-                ROOT::Tree
-                ROOT::TreeViewer
-                ROOT::XMLIO
+#                ROOT::Graf
+#                ROOT::Gui
+#                ROOT::Hist
+#                ROOT::MathCore
+#                ROOT::Matrix
+#                ROOT::Minuit
+#                ROOT::Minuit2
+#                ROOT::Rint
+#                ROOT::TMVA
+#                ROOT::Tree
+#                ROOT::TreeViewer
+#                ROOT::XMLIO
             )
 
 
